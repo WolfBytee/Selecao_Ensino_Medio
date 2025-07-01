@@ -1,0 +1,41 @@
+<form action="" method="POST">
+    <div class="formularioInscricao">
+        <div class="titulo">
+            <h1>Inscreva-se:</h1>
+        </div>
+        <p>Nome Completo</p>
+            <input type="text" name="nome" placeholder="Nome completo" inputmode="latin-name" required/>
+        <p>Email</p>
+            <input type="email" name="email" placeholder="Email" inputmode="email" required/>
+        <p>CPF</p>
+            <input type="text" id="CPF" name="CPF" placeholder="000.000.000-00" maxlength="14" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required/>
+        <p>Data de nascimento</p>
+            <input type="date" name="data_nasc"required/>
+        <p>Curso</p>
+            <select type="integer" name="curso_id">
+                <option value=1>Técnico em Informática</option>
+                <option value=2>Técnico em Eletrotécnica</option>
+            </select>
+        <div class="botao-enviar">
+            <button type="submit">Enviar</button>
+        </div>
+        <div class="botao-voltar">
+            <a href="http://localhost:8081/">Voltar</a>
+        </div>
+    </div>
+</form>
+<script>
+    const CPF = document.getElementById('CPF');
+
+    CPF.addEventListener('input', function(e){
+        let v = e.target.value
+
+        var cpfPattern = v.replace(/\D/g, '')
+						.replace(/(\d{3})(\d)/, '$1.$2')
+						.replace(/(\d{3})(\d)/, '$1.$2') 
+						.replace(/(\d{3})(\d)/, '$1-$2')
+						.replace(/(-\d{2})\d+?$/, '$1')
+
+        e.target.value = cpfPattern;
+    })
+</script>
