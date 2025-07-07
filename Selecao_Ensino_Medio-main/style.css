@@ -1,1184 +1,676 @@
-.lanepage-view {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  background-color: #ffffff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.lanepage-view .header {
-  display: flex;
-  align-items: flex-start;
-  padding: 10px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: transparent;
+body{
+    font-family: Arial, sans-serif;
 }
 
-.lanepage-view .logo-IFMS {
-  display: flex;
-  flex-direction: column;
-  width: 570px;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
+/*//////////////////Header da lane-page///////////////////*/
+.header{
+    background-color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    border-bottom: 1px solid #e0e0e0;
+    top: 0;
+    z-index: 1000;
 }
 
-.lanepage-view .ifms-tl-marca {
-  position: relative;
-  width: 138px;
-  height: 44px;
-  margin-bottom: -8.00px;
-  margin-left: -4.00px;
-  object-fit: cover;
+.container01{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.lanepage-view .barra-navegao {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 104px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
+.if_logo img{
+    height: clamp(35px,5vw,37px);
+    width: auto;
 }
 
-.lanepage-view .text-wrapper {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  margin-left: -43.50px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
+.barra_nav ul, .barra_nav2 ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.lanepage-view .div {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
+.barra_nav a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+    transition: color 0.3s ease;
 }
 
-.lanepage-view .text-wrapper-2 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  margin-right: -43.50px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
+.barra_nav a:hover {
+    color: #d6752b;
 }
 
-.lanepage-view .IFMS {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 120px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #0f1e56;
+/*//////////////////Nome campus///////////////////*/
+.campus {
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+   align-items: flex-start;
+   background-color: #0f1e56;
+   padding: 7rem;
 }
 
-.lanepage-view .frame {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
+.p1, .p2 {
+    color: #ffffff;
+    font-weight: 800;
+}
+.p1 {
+    font-size: clamp(1rem, 3vw, 1rem);
+    text-shadow: 0px 4px 4px #00000040;
+}
+.p2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    text-align: left;
+    text-shadow: 0px 4px 4px #00000040;
 }
 
-.lanepage-view .text-wrapper-3 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+/*//////////////////Barra navegação na lane page///////////////////*/
+.barra_nav2{
+    background-color: #1b2a4b;
+    padding: 0 20px;
+}
+.barra_nav2 ul{
+    justify-content: end;
+}
+.barra_nav2 a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    transition: color 0.3s ease;
 }
 
-.lanepage-view .p {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #ffffff;
-  font-size: 53px;
-  letter-spacing: 0;
-  line-height: normal;
+.barra_nav2 a:hover {
+    color: #d6752b;
 }
 
-.lanepage-view .text-wrapper-4 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+/*//////////////////Quem somos///////////////////*/
+
+.quem_somos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/institui--o.png) 50% 50% / cover;
+    padding: clamp(5rem, 20vw, 30rem);
+    width: 100%;
 }
 
-.lanepage-view .barra-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 20px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #1b2a4b;
+.container02{
+    padding: 2rem;
+    text-align: center;
+    text-align: justify;
+    background-color: #c3c3c3;
 }
 
-.lanepage-view .atalhos {
-  display: inline-flex;
-  align-items: center;
-  gap: 43px;
-  position: relative;
-  flex: 0 0 auto;
+/*//////////////////Por que ser if///////////////////*/
+.why {
+    background-color: #1b2a4b;
+    text-align: center;
 }
 
-.lanepage-view .text-wrapper-5 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+.p4 {
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.lanepage-view .instituio {
-  display: flex;
-  flex-direction: column;
-  height: 452px;
-  align-items: flex-start;
-  padding: 120px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/institui--o.png) 50%
+.what{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: clamp(10rem, 20vw, 30rem);
+    padding-top: 35px;
+    padding-bottom: 3%;
+}
+
+.p5{
+    color: #d6752b;
+    font-weight: 900;
+    font-size: clamp(30px, 5vw, 50px);
+    text-shadow: 0px 4px 4px #00000040;
+    line-height: normal;
+    width: 100%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.p6{
+   text-align: center;
+   font-family: "Inter", Arial, Helvetica, sans-serif;
+   font-weight: 400;
+   color: #00000094;
+   margin-bottom: 5%;
+}
+
+.line{
+    width: 100%;
+    background-color: #d6752b;
+    height: 5px;
+}
+
+
+/*//////////////////classe bolsa porquinho///////////////////*/
+.bolsas{
+    display: flex;
+    align-items: flex-start;
+    padding: 50px 10%;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    /*flex: 0 0 auto;*/
+    gap: 20px;
+}
+
+.line_text{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+.line2 {
+   display: flex;
+   width: 15px;
+   align-items: center;
+   gap: 10px;
+   position: relative;
+}
+.retangulo{
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+    height: 244px;
+    background-color: #0f1e56;
+    transform: rotate(180deg);
+}
+.p7{
+    font-size: clamp(1.2rem, 5vw, 3rem);
+    color:#0f1e56;
+    margin-bottom: 5%;
+    letter-spacing: 0;
+    font-weight: 700;
+    text-shadow:0px 4px 4px #00000040;
+    
+}
+
+.bolsas img{
+    height: clamp(0.5rem, 30vw, 20rem);
+}
+
+@media (max-width: 768px){
+    .bolsas{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*//////////////////Classe carrossel///////////////////*/
+
+.comodidades{
+    background-color: #0f1e56;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-inline: clamp(0.2rem, 10vw, 50rem);
+}
+.anmt{
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    background:#0f1e56;
+    position: relative;
+}
+.comodit{
+    display: flex;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    gap: 60px;
+    animation: 10s slide infinite linear;
+}
+.s00 {
+    color: #ffffff;
+    font-weight: 900;
+}
+.s01{
+    color: #d6752b;
+    font-weight: 900;
+}
+
+.el1, .el2, .el3{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.el1 img, .el2 img, .el3 img{
+    height: 20vw;
+}
+
+/*edição por elemento*/
+
+.el1 p{
+    position: relative;
+    align-self: center;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    color: #ffffff;
+}
+
+.el2 p, .s0{
+    color: #ffffff;
+    position: relative;
+    align-self: center;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 3vw, 1rem);
+}
+.s1{
+    font-weight: 400;
+    color: #d6752b;
+    font-size: clamp(0.5rem, 3vw, 1rem);
+}
+
+/*//////////////////Animação///////////////////*/
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.anmt:hover .comodit{
+    animation-play-state: paused;
+}
+
+/*//////////////////Atletismo///////////////////*/
+.atleta{
+    background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/bolsa-atletismo.png) 50% 50% / cover;
+    width: 100%;
+    height: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.info{
+    background-color: #ffffff;
+    padding: 3vw;
+}
+.p9{
+    font-size: 65%;
+}
+.p10{
+    color: #5c5656;
+}
+
+/*//////////////////Redirecionamentos///////////////////*/
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+    padding: clamp(20px, 5vw, 50px) clamp(20px, 8vw, 390px);
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+  .direcionamentos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(20px, 4vw, 50px);
+    flex: 1 1 300px;
+    min-width: 250px;
+    width: 100%;
+  }
+  
+  .div-3 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+  }
+  
+  .barra {
+    width: 100%;
+    height: 15px;
+    background-color: #d6752b;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .div-wrapper-2,
+  .div-wrapper-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    background-color: #efefef;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 #000000;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .text-wrapper-20 {
+    text-shadow: 5px 4px 4px #00000040;
+    font-family: "Inter", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: clamp(16px, 2vw, 20px);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .text-wrapper-20:hover {
+    color: #d6752b;
+  }
+  
+  .assuntos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  
+  .assunto {
+    display: flex;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #efefef;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 #000000;
+    box-sizing: border-box;
+  }
+  
+  /* Responsivo para telas pequenas */
+  @media (max-width: 768px) {
+    .links {
+      flex-direction: column;
+      padding: 30px 5vw;
+    }
+  
+    .direcionamentos {
+      flex-direction: column;
+    }
+  
+    .link {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+/*/////////////////////////horta//////////////////////////*/
+
+.hortalicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/image.png) 50% 50% / cover;
+    padding: clamp(100px, 20vw, 200px) clamp(150px, 35vw, 390px);
+
+}
+
+.frame01{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(12px, 2vw, 20px) clamp(24px, 5vw, 50px);
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #ffffffad;
+}
+
+.text-wrapper-al{
+    width: 100%;
+    margin-top: -1px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-weight: 900;
+    color: #d6752b;
+    font-size: clamp(50px, 10vw, 60px);
+    position: relative;
+    font-family: "Inter", Helvetica;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.p11{
+    text-align: justify;
+    width: fit-content;
+    font-weight: 400;
+    color: #00000094;
+    font-size: clamp(16px, 2vw, 20px);
+    
+    position: relative;
+    font-family: "Inter", Helvetica;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+/*/////////////////////////acessibilidade//////////////////////////*/
+.estrutura{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 5%;
+    padding: 0 10vw;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px){
+    .estrutura{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.est01{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.p12{
+    text-align: center;
+    position: relative;
+    align-self: stretch;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Inter", Helvetica;
+    font-weight: 900;
+    color: #d6752b;
+    font-size: clamp(1.1rem, 3.5vw, 2rem);
+}
+.p13{
+    text-align: justify;
+    width: fit-content;
+    font-weight: 400;
+    color: #00000094;
+    font-size: clamp(16px, 2vw, 20px);
+    
+    position: relative;
+    font-family: "Inter", Helvetica;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+/*botao com setinha*/
+.seta-btn {
+    margin-top: 10px;
+    background-color: #d6752b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+  
+.seta-btn:hover {
+    background-color: #bb5e19;
+    transform: scale(1.05);
+}
+  
+  /* Ocultar texto */
+.p13 {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+  
+.p13.mostrar {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/*Pessoas*/
+.pessoas{
+    height: 25vw;
+    background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/diferencial.png) 50%
     50% / cover;
-}
-
-.lanepage-view .div-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 70px 50px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  margin-bottom: -48.00px;
-  background-color: #c3c3c3;
-  box-shadow: 0px 4px 4px #00000040;
-}
-
-.lanepage-view .text-wrapper-6 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #090909;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .cabealho-diferencial {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #1e255c;
-}
-
-.lanepage-view .text-wrapper-7 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 8.00px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.lanepage-view .diferencial {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 120px 390px;
-  flex: 0 0 auto;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.lanepage-view .frame-2 {
-  display: flex;
-  flex-direction: column;
-  min-width: 550px;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .text-wrapper-8 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #d6752b;
-  font-size: 60px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .text-wrapper-9 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #00000094;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .rectangle {
-  position: relative;
-  min-width: 300px;
-  max-width: 600px;
-  width: 100%;
-  height: 5px;
-  background-color: #d6752b;
-}
-
-.lanepage-view .auxilios {
-  display: flex;
-  align-items: flex-start;
-  padding: 120px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .frame-3 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .rectangle-wrapper {
-  display: flex;
-  width: 25px;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  position: relative;
-}
-
-.lanepage-view .rectangle-2 {
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-  height: 244px;
-  background-color: #0f1e56;
-  transform: rotate(180deg);
-}
-
-.lanepage-view .frame-4 {
-  display: inline-flex;
-  flex-direction: column;
-  height: 244px;
-  align-items: flex-start;
-  padding: 0px 50px 0px 0px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .frame-5 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0px 0px 20px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .text-wrapper-10 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #0f1e56;
-  font-size: 50px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .voc-futuro-estudante-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .voc-futuro-estudante {
-  position: relative;
-  width: 530px;
-  height: 119px;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #1e255c;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .pngwing-com-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .pngwing-com {
-  position: relative;
-  width: 525px;
-  height: 296.1px;
-  margin-right: -240.00px;
-  object-fit: cover;
-}
-
-.lanepage-view .comodidades {
-  display: flex;
-  align-items: flex-start;
-  padding: 120px 390px 0px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #0f1e56;
-}
-
-.lanepage-view .titulo-comodidades {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .text-wrapper-11 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #d6752b;
-  font-size: 30px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.lanepage-view .texto-comodidades {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0px 50px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .USUFRUTE-DAS {
-  position: relative;
-  width: 649px;
-  margin-top: -1.00px;
-  margin-left: -149.50px;
-  margin-right: -149.50px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .span {
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.lanepage-view .text-wrapper-12 {
-  font-weight: 600;
-  color: #d6752b;
-}
-
-.lanepage-view .comodidades-2 {
-  display: flex;
-  align-items: flex-start;
-  gap: 200px;
-  padding: 50px 390px 120px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #0f1e56;
-}
-
-.lanepage-view .viagens {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .pngegg {
-  position: relative;
-  width: 318px;
-  height: 292px;
-}
-
-.lanepage-view .text-wrapper-13 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .ifmaker {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  height: 328px;
-  align-items: center;
-  position: relative;
-}
-
-.lanepage-view .impressora {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.lanepage-view .div-2 {
-  position: relative;
-  width: fit-content;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .text-wrapper-14 {
-  color: #ffffff;
-}
-
-.lanepage-view .text-wrapper-15 {
-  color: #d6752b;
-}
-
-.lanepage-view .eventos {
-  display: flex;
-  flex-direction: column;
-  width: 270px;
-  align-items: center;
-  position: relative;
-  margin-right: -368.00px;
-}
-
-.lanepage-view .tickets {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 261px;
-}
-
-.lanepage-view .bolsa-atletismo {
-  display: flex;
-  flex-direction: column;
-  height: 742px;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 120px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/bolsa-atletismo.png)
-    50% 50% / cover;
-}
-
-.lanepage-view .info {
-  display: flex;
-  flex-direction: column;
-  width: 456px;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 31px;
-  padding: 20px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #ffffffeb;
-  border-radius: 20px;
-}
-
-.lanepage-view .estudante-atleta {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #0f1e56;
-  font-size: 50px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .text-wrapper-16 {
-  font-weight: 600;
-}
-
-.lanepage-view .text-wrapper-17 {
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #0f1e56;
-  font-size: 50px;
-  letter-spacing: 0;
-}
-
-.lanepage-view .text-wrapper-18 {
-  font-style: italic;
-}
-
-.lanepage-view .text-wrapper-19 {
-  position: relative;
-  align-self: stretch;
-  height: 38.47px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #1e255c;
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .invista-em-voc {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #1e255c;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .links {
-  display: flex;
-  height: 650px;
-  align-items: flex-start;
-  padding: 50px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #ffffff;
-}
-
-.lanepage-view .direcionamentos {
-  display: flex;
-  min-width: 650px;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 50px;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  flex-grow: 1;
-}
-
-.lanepage-view .div-3 {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #ffffff;
-}
-
-.lanepage-view .barra {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 15px;
-  background-color: #d6752b;
-  border-radius: 10px 10px 0px 0px;
-}
-
-.lanepage-view .div-wrapper-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  width: 100%;
-  flex-grow: 1;
-  background-color: #efefef;
-  border-radius: 0px 0px 10px 10px;
-  overflow: hidden;
-}
-
-.lanepage-view .text-wrapper-20 {
-  position: relative;
-  flex: 1;
-  text-shadow: 5px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .assuntos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-}
-
-.lanepage-view .assunto {
-  display: flex;
-  height: 85px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #efefef;
-  border-radius: 0px 0px 10px 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 0px #000000;
-}
-
-.lanepage-view .div-wrapper-3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  width: 100%;
-  flex-grow: 1;
-  background-color: #efefef;
-  border-radius: 0px 0px 10px 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 0px #000000;
-}
-
-.lanepage-view .image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 200px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/image.png) 50% 50% /
-    cover;
-}
-
-.lanepage-view .frame-6 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 50px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #ffffffad;
-}
-
-.lanepage-view .text-wrapper-21 {
-  width: 385px;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-weight: 900;
-  color: #d6752b;
-  font-size: 60px;
-  position: relative;
-  font-family: "Inter", Helvetica;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .alimenta-o-escolar {
-  width: fit-content;
-  font-weight: 400;
-  color: #00000094;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
-  font-family: "Inter", Helvetica;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .diferencial-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 100px;
-  padding: 120px 390px 50px;
-  flex: 0 0 auto;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.lanepage-view .frame-7 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .frame-8 {
-  display: inline-flex;
-  flex-direction: column;
-  height: 61px;
-  align-items: center;
-  position: relative;
-}
-
-.lanepage-view .text-wrapper-22 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #d6752b;
-  font-size: 50px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .rectangle-3 {
-  position: relative;
-  width: 568px;
-  height: 5px;
-  background-color: #d6752b;
-}
-
-.lanepage-view .frame-9 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 71px;
-  padding: 0px 5px;
-  position: relative;
-  flex: 0 0 auto;
-  margin-left: -218.00px;
-  margin-right: -218.00px;
-}
-
-.lanepage-view .frame-10 {
-  display: flex;
-  flex-direction: column;
-  width: 394.67px;
-  align-items: center;
-  position: relative;
-}
-
-.lanepage-view .text-wrapper-23 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 900;
-  color: #d6752b;
-  font-size: 30px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .diferencial-3 {
-  height: 641px;
-  background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/diferencial.png) 50%
-    50% / cover;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.lanepage-view .frame-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 120px 390px 0px;
-  flex: 0 0 auto;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.lanepage-view .frame-11 {
-  display: flex;
-  height: 264px;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.lanepage-view .frame-12 {
-  display: flex;
-  width: 25px;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  position: relative;
-  background-color: #ffffff;
-}
-
-.lanepage-view .rectangle-4 {
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-  height: 244px;
-  background-color: #d6752b;
-  transform: rotate(180deg);
-}
-
-.lanepage-view .frame-13 {
-  display: flex;
-  flex-direction: column;
-  height: 244px;
-  align-items: flex-start;
-  gap: 20px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .frame-14 {
-  display: flex;
-  height: 122px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #d6752b;
-}
-
-.lanepage-view .text-wrapper-24 {
-  position: relative;
-  flex: 1;
-  text-shadow: 0px 4px 4px #00000040;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 50px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .frame-15 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-}
-
-.lanepage-view .voc-futuro-estudante-2 {
-  position: relative;
-  flex: 1;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #1e255c;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .diferencial-4 {
-  height: 1501px;
-  background: url(https://c.animaapp.com/mb6xexvc8k3QhE/img/diferencial-1.png)
-    50% 50% / cover;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.lanepage-view .laranja-sessao {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 34px;
-  background-color: #d6752b;
-}
-
-.lanepage-view .footer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 100px;
-  padding: 20px 390px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: transparent;
-}
-
-.lanepage-view .contatos {
-  display: inline-flex;
-  flex-direction: column;
-  height: 132.67px;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .div-4 {
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.lanepage-view .img {
-  position: relative;
-  width: 30px;
-  height: 30px;
-}
-
-.lanepage-view .text-wrapper-25 {
-  position: relative;
-  width: fit-content;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.lanepage-view .contato-face {
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
-  position: relative;
-  flex: 0 0 auto;
-  margin-bottom: -17.33px;
-}
-
-.lanepage-view .ifms-tl-marca-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .ifms-tl-marca-2 {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 34.73px;
-  margin-left: -4.00px;
-  margin-right: -4.00px;
-  object-fit: cover;
-}
-
-.lanepage-view .MINIST-RIO-DA-EDUCA {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: right;
-  line-height: normal;
-}
-
-.lanepage-view .text-wrapper-26 {
-  letter-spacing: 0;
-}
-
-.lanepage-view .text-wrapper-27 {
-  font-weight: 900;
-  letter-spacing: 0;
-}
-
-.lanepage-view .repr-gov {
-  display: flex;
-  flex-direction: column;
-  min-width: 131px;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.lanepage-view .GOVERNO-FEDERAL {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 2.00px;
-  line-height: normal;
-}
-
-.lanepage-view .rectangle-5 {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 37.1px;
-  background-color: #d9d9d9;
-}
-
-.lanepage-view .text-wrapper-28 {
-  position: relative;
-  align-self: stretch;
-  height: 14.5px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 15px;
-  text-align: center;
-  letter-spacing: 3.00px;
-  line-height: normal;
-  white-space: nowrap;
-}
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+}
+
+/*/////////////////////////MAPA IFMS//////////////////////////*/
+
+.map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15vw;
+    position: relative;
+    width: 100%;
+}
+
+.box-areas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex: 0 0 auto;
+    
+}
+
+.title{
+    display: flex;
+    background-color: #d6752b;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-self: stretch;
+    color:#ffffff;
+    font-weight: 900;
+    font-size: 3vw;
+}
+
+.text{
+    text-align: justify;
+    color: #333;
+}
+
+.mapacompleto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mapacompleto img {
+    width: 90%;
+    height: auto;
+    display: block;
+  }
+
+/*/////////////////////////footer//////////////////////////*/
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 2vw;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: transparent;
+  }
+
+.contatos {
+    display: inline-flex;
+    gap: 30px;
+    position: relative;
+    flex: 0 0 auto;
+    padding: 40px;
+  }
+
+  .div-00 {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+.div-00 img{
+    height: 30px;
+}
+  .footer-text {
+    position: relative;
+    width: fit-content;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 70%;
+    letter-spacing: 0;
+    line-height: normal;
+  }
