@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Container Responsivo</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #28a745, #007bff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container-principal {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 900px;
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .lado-esquerdo {
+      flex: 1;
+      min-width: 280px;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .imagem-ilustrativa {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .texto-apresentacao {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .lado-direito {
+      flex: 1;
+      min-width: 280px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .mensagem-acao {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .botao-transparente {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background-color: transparent;
+      border: 2px solid #007bff;
+      color: #007bff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .botao-transparente:hover {
+      background-color: #007bff;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      .container-principal {
+        flex-direction: column;
+      }
+
+      .lado-esquerdo,
+      .lado-direito {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-principal">
+    <div class="lado-esquerdo">
+      <img src="img/ifms-tl-marca-2015.png" alt="Imagem de apresentação" class="imagem-ilustrativa" />
+      <p class="texto-apresentacao">
+        Seja bem-vindo(a)! Descubra sua próxima etapa na rede de ensino.
+      </p>
+    </div>
+
+    <div class="lado-direito">
+      <p class="mensagem-acao">O que deseja fazer?</p>
+      <a href="index.html" class="botao-transparente">Entrar</a>
+      <a href="matricula.html" class="botao-transparente">Matricular-se</a>
+    </div>
+  </div>
+
+</body>
+</html>
